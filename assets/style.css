@@ -1,0 +1,21 @@
+.home-container {
+  background-color: red;
+}
+
+.sc-wrapper {
+  position: relative;
+}
+
+
+iframe {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 200px !important;
+}
+
+.tour-container {
+  width: 100%;
+  height: 300px;
+  border: 1px solid blue;
+}

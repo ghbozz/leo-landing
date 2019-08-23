@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="./assets/style.css">
+  <title>Saint Lanvain</title>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Music
+          </a>
+
+          <a class="navbar-item">
+            Tour
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container home-container">
+        <p class="title">
+          Main Title
+        </p>
+      </div>
+    </div>
+    <div class="columns is-mobile is-gapless">
+      <div class="column">
+        <div class="player-wrapper">
+          <div class="tracks">
+            <span class="track">thomax-1</span>
+            <span class="track">thomax-2</span>
+          </div>
+          <audio id="player" src="assets/audio/thomax-1.mp3"></audio>
+          <div>
+            <button id="play" onclick="document.getElementById('player').play()">Play</button>
+            <button onclick="document.getElementById('player').pause()">Pause</button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="tour-container">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const changeTrack = () => {
+      const tracks = document.querySelectorAll('.track')
+      tracks.forEach((track) => {
+        track.addEventListener('click', (e) => {
+          console.log(e)
+          document.getElementById('player').src = `assets/audio/${track.innerText}.mp3`
+          document.getElementById('play').click();
+        })
+      })
+    }
+
+    changeTrack();
+  </script>
+</body>
+</html>
