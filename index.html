@@ -12,8 +12,8 @@
 <body>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      <a class="navbar-item">
+        <h1>SAINT LANVAIN</h1>
       </a>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -26,11 +26,11 @@
     <div class="navbar-end">
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
+          <a class="navbar-item main-color">
             Music
           </a>
 
-          <a class="navbar-item">
+          <a class="navbar-item main-color">
             Tour
           </a>
         </div>
@@ -45,12 +45,23 @@
     <div class="container">
       <div class="main-title">
         <div class="columns is-vcentered">
-          <div class="column is-half">
-            <h1 class="title">SAINT LANVAIN</h1>
+          <div class="column is-half banner-left">
+            <h1 class="title text-main">SAINT LANVAIN</h1>
             <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque atque reiciendis error quas voluptates debitis mollitia aspernatur nobis officia!</h3>
+            <div class="main-btn has-text-centered">
+              listen on iTunes <i class="fab fa-itunes-note"></i>
+            </div>
+
+            <div class="socials">
+              <i class="fab fa-itunes-note"></i>
+              <i class="fab fa-spotify"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook-f"></i>
+            </div>
           </div>
-          <div class="column is-half has-text-centered">
-            <img src="http://img.over-blog-kiwi.com/1/61/04/44/20181201/ob_691dc2_oljri3q9rapaa-600.jpg" alt="" width="400">
+          <div class="column is-half has-text-centered banner-right">
+            <img class="main-cover" src="http://img.over-blog-kiwi.com/1/61/04/44/20181201/ob_691dc2_oljri3q9rapaa-600.jpg" alt="" width="400">
           </div>
         </div>
       </div>
@@ -65,7 +76,7 @@
             </div>
 
             <div class="control-wrapper">
-              <div class="current-track">thomax-1</div>
+              <div class="current-track">listen</div>
               <div class="timeline">
                 <div class="progress"></div>
               </div>
@@ -73,7 +84,7 @@
                 <div class="player-control" id="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></div>
                 <div class="player-control" id="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></div>
               </div>
-              <audio id="player" src="assets/audio/thomax-1.mp3"></audio>
+              <audio id="player" src=""></audio>
             </div>
           </div>
 
@@ -87,8 +98,28 @@
           </div>
         </div>
       </div>
-      <div class="right-scene">
+      <div class="right-scene text-white">
         <h3 class="subtitle text-white">Upcoming Tours</h3>
+        <div class="columns">
+          <div class="column is-half is-vcentered">
+            <div class="tour">
+              <div class="date">
+                <h4>SEP</h4>
+                <p>07</p>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, deleniti.</p>
+            </div>
+          </div>
+          <div class="column is-half is-vcentered">
+            <div class="tour">
+              <div class="date">
+                <h4>OCT</h4>
+                <p>15</p>
+              </div>
+              <p>consectetur adipisicing elit. Quibusdam, deleniti, Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
