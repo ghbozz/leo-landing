@@ -44,46 +44,83 @@
   <section class="hero is-fullheight-with-navbar">
     <div class="hero-body">
       <div class="container home-container">
-        <p class="title">
-          Main Title
-        </p>
-      </div>
-    </div>
-    <div class="columns is-mobile is-gapless">
-      <div class="column">
+
         <div class="player-wrapper">
-          <div class="tracks">
-            <span class="track">thomax-1</span>
-            <span class="track">thomax-2</span>
+
+          <div class="player-img" style="background-image: url('assets/images/thomax-1.jpg');">
           </div>
-          <audio id="player" src="assets/audio/thomax-1.mp3"></audio>
-          <div>
-            <button id="play" onclick="document.getElementById('player').play()">Play</button>
-            <button onclick="document.getElementById('player').pause()">Pause</button>
+
+          <div class="control-wrapper">
+            <div class="current-track"></div>
+            <div class="timeline">
+              <div class="progress"></div>
+            </div>
+            <div class="player-btns">
+              <button class="player-control" id="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button>
+              <button class="player-control" id="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button>
+            </div>
+            <audio id="player" src="assets/audio/thomax-1.mp3"></audio>
           </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="tour-container">
+
+          <div class="tracks-wrapper">
+            <ul class="tracks">
+              <li class="track">thomax-1</li>
+              <li class="track">thomax-2</li>
+              <li class="track">thomax-3</li>
+            </ul>
+          </div>
 
         </div>
+
       </div>
     </div>
   </section>
 
   <script>
-    const changeTrack = () => {
+    const initPlayer = () => {
       const tracks = document.querySelectorAll('.track')
       tracks.forEach((track) => {
         track.addEventListener('click', (e) => {
-          console.log(e)
-          document.getElementById('player').src = `assets/audio/${track.innerText}.mp3`
-          document.getElementById('play').click();
+          setTrack(track);
+          toggleActive(tracks, e)
         })
       })
     }
 
-    changeTrack();
+    const setTrack = (track) => {
+      document.getElementById('player').src = `assets/audio/${track.innerText}.mp3`
+      document.querySelector('.player-img').style.backgroundImage = `url('assets/images/${track.innerText}.jpg')`
+      document.querySelector('.current-track').innerText = `${track.innerText}`
+      document.getElementById('play').click();
+      setInterval(progressBar, 500)
+    }
+
+    const toggleActive = (tracks, e) => {
+      tracks.forEach((track) => {
+        track.classList.remove('active')
+      })
+      e.currentTarget.classList.add('active')
+    }
+
+    const nextTrack = () => {
+      const currentTrack = document.querySelector('.active')
+      if (currentTrack.nextElementSibling) {
+        currentTrack.classList.remove('active')
+        currentTrack.nextElementSibling.classList.add('active')
+        setTrack(currentTrack.nextElementSibling)
+      } else {
+        setTrack(document.querySelectorAll('.track')[0])
+      }
+    }
+
+    const progressBar = () => {
+      const progress = document.querySelector('.progress')
+      const player = document.getElementById('player')
+      const calc = (100 * player.currentTime) / player.duration
+      calc < 99.9 ? progress.style.width = `${calc}%` : nextTrack()
+    }
+
+    initPlayer();
   </script>
 </body>
 </html>
