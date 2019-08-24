@@ -7,19 +7,17 @@
 .player-wrapper {
   width: 750px;
   height: 200px;
-/*  border: 1px solid black;*/
-  /*border-radius: 7px;*/
+  padding: 30px;
+  background-color: rgba(240, 64, 71, 0.9);
   display: flex;
 }
 
 .control-wrapper {
   position: relative;
-  background-color: rgba(240, 64, 71, 0.9);
   flex-grow: 1;
 }
 
 .tracks-wrapper {
-  background-color: rgba(240, 64, 71, 0.9);
   color: white;
   border-left: 1px solid rgba(30, 30, 30, 0.3);
   border-top-right-radius: 7px;
@@ -34,10 +32,8 @@
 .player-img {
   background-position: center;
   background-size: cover;
-
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-  width: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .player-control {
@@ -48,7 +44,7 @@
 
 .player-btns {
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -74,7 +70,7 @@
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  top: 15%;
+  top: 0;
   color: white;
   font-weight: bold;
   font-size: 1.7em;
