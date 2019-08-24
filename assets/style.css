@@ -1,7 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text-white {
+  color: white;
+}
+
 .home-container {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.navbar {
+  padding: 0px 40px;
+}
+
+.navbar-item {
+  font-weight: 600;
+}
+
+.hero {
+  position: relative;
 }
 
 .player-container {
@@ -14,10 +36,13 @@
 }
 
 .player-wrapper {
-  width: 750px;
+  width: 100%;
   height: 200px;
   padding: 30px;
-  background-color: rgba(240, 64, 71, 0.9);
+  background: rgba(247, 64, 70, 0.9);
+  -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
+  -moz-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
+  box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
   display: flex;
 }
 
@@ -118,4 +143,38 @@
 .active {
   background-color: rgba(240, 240, 240, 0.2);
   font-weight: bolder;
+}
+
+
+.home-footer {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.home-footer .left-scene {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 45%;
+}
+
+.home-footer .right-scene {
+  z-index: 1;
+  border-top-left-radius: 4px;
+  height: 250px;
+  width: 55%;
+  background: radial-gradient(circle, rgba(0,0,0,0.8) 70%, rgba(17,14,14,1) 150%);
+  -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
+  -moz-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
+  box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
+}
+
+.right-scene h3 {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.main-title {
+  margin-top: 100px;
 }
