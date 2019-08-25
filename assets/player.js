@@ -30,6 +30,8 @@ const nextTrack = () => {
     currentTrack.nextElementSibling.classList.add('active')
     setTrack(currentTrack.nextElementSibling)
   } else {
+    currentTrack.classList.remove('active')
+    document.querySelectorAll('.track')[0].classList.add('active')
     setTrack(document.querySelectorAll('.track')[0])
   }
 }
@@ -41,4 +43,16 @@ const progressBar = () => {
   calc < 99.9 ? progress.style.width = `${calc}%` : nextTrack()
 }
 
+const playHead = () => {
+  const timeLine = document.querySelector('.timeline')
+  const player = document.getElementById('player')
+  timeLine.addEventListener('click', (e) => {
+    if (e.offsetX > 1) {
+      const pos = ((e.offsetX * 100) / e.target.offsetWidth)
+      player.currentTime = (player.duration / 100) * pos
+    }
+  })
+}
+
 initPlayer();
+playHead();
