@@ -29,10 +29,6 @@ const nextTrack = () => {
     currentTrack.classList.remove('active')
     currentTrack.nextElementSibling.classList.add('active')
     setTrack(currentTrack.nextElementSibling)
-  } else {
-    currentTrack.classList.remove('active')
-    document.querySelectorAll('.track')[0].classList.add('active')
-    setTrack(document.querySelectorAll('.track')[0])
   }
 }
 
