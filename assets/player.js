@@ -14,6 +14,7 @@ const setTrack = (track) => {
   document.querySelector('.current-track').innerText = `${track.innerText}`
   document.getElementById('play').click();
   setInterval(progressBar, 500)
+  playHead();
 }
 
 const toggleActive = (tracks, e) => {
@@ -28,7 +29,7 @@ const nextTrack = () => {
   if (currentTrack.nextElementSibling) {
     currentTrack.classList.remove('active')
     currentTrack.nextElementSibling.classList.add('active')
-    setTrack(currentTrack.nextElementSibling)
+    setTrack(document.querySelector('.active'))
   }
 }
 
@@ -51,4 +52,3 @@ const playHead = () => {
 }
 
 initPlayer();
-playHead();
