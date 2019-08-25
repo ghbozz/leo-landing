@@ -18,12 +18,6 @@ body {
   color: white;
 }
 
-.home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .navbar {
   padding: 0px 40px;
 }
@@ -37,9 +31,11 @@ body {
 }
 
 .main-cover {
+  border-radius: 4px;
   -webkit-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
   box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+  animation: float 6s ease-in-out infinite;
 }
 
 .tag-line {
@@ -112,8 +108,8 @@ body {
 }
 
 .tracks-wrapper {
-  color: white;
-  border-right: 1px solid rgba(240, 240, 240, 0.1);
+  color: rgba(247, 64, 70, 0.9);
+  border-right: 1px solid rgba(247, 64, 70, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +117,7 @@ body {
   height: 100%;
   width: 200px;
   position: absolute;
-  background-color: rgb(240, 64, 71);
+  background-color: white;
   transform: translateY(-100%);
   left: -50%;
   transition: all 0.4s ease-out;
@@ -197,14 +193,16 @@ body {
 }
 
 .track:hover {
-  background-color: rgba(240, 240, 240, 0.1);
+  background-color: rgba(247, 64, 70, 0.2);
 }
 
 .active {
-  background-color: rgba(240, 240, 240, 0.2);
+  color: white;
+  background-color: rgba(247, 64, 70, 0.7);
   font-weight: bolder;
+/*  border-left: 5px solid rgba(247, 64, 70, 0.9);
+  border-right: 5px solid rgba(247, 64, 70, 0.9);*/
 }
-
 
 .home-footer {
   display: flex;
@@ -244,6 +242,53 @@ body {
   border-radius: 4px;
 }
 
+.tour {
+  padding-right: 75px;
+}
+
 .main-title {
   margin-top: 115px;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-10px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-footer {
+    display: none;
+  }
+
+  .column {
+    padding: 0px !important;
+  }
+
+  .banner-left {
+    padding-right: 0px;
+    text-align: center;
+  }
+
+  .main-btn {
+    margin: auto;
+  }
+
+  .socials i {
+    padding: 10px;
+  }
+
+  .banner-right {
+    display: flex;
+    justify-content: center;
+  }
 }
