@@ -4,6 +4,8 @@ const initPlayer = () => {
     track.addEventListener('click', (e) => {
       setTrack(track);
       toggleActive(tracks, e)
+      setInterval(progressBar, 500)
+      playHead();
     })
   })
 }
@@ -13,8 +15,6 @@ const setTrack = (track) => {
   document.querySelector('.player-img').style.backgroundImage = `url('assets/images/${track.innerText}.jpg')`
   document.querySelector('.current-track').innerText = `${track.innerText}`
   document.getElementById('play').click();
-  setInterval(progressBar, 500)
-  playHead();
 }
 
 const toggleActive = (tracks, e) => {
