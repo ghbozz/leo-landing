@@ -41,64 +41,66 @@
   </nav>
 
   <section class="is-fullheight-with-navbar">
-
-    <div class="container main-container">
-      <div class="columns is-desktop is-multiline has-text-centered">
-        <div class="column is-vcentered is-half">
-          <div class="album-card">
-            <img class="cover" src="assets/images/jesus.jpg" alt="">
-            <div class="album-details">
-              <div class="album-header">
-                <h1 class="subtitle"><strong>Lorem ipsum dolor.</strong></h1>
-                <span class="card-date">2018</span>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis eaque, eius nemo nihil dolor officia?</p>
+    <div class="music-banner columns">
+      <div class="music-infos column is-one-third">
+        <h1 class="title text-main">MUSIC</h1>
+        <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque atque reiciendis error quas voluptates debitis mollitia aspernatur nobis officia!</h3>
+        <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:3QYP9mDP6WVvHHUUBBXlgi&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true" style="margin-top: 20px"></iframe>
+      </div>
+      <div class="column is-two-thirds">
+        <div class="columns is-vcentered is-2 is-half covers">
+          <div class="column cover-column" style="transform: translateY(30px);">
+            <div class="vertical-cover">
+              <img class="cover" src="assets/images/crazy-remix.jpg" alt="" data-aos="fade-left" data-aos-duration="600">
             </div>
           </div>
-        </div>
-        <div class="column is-vcentered is-half">
-          <div class="album-card">
-            <img class="cover" src="assets/images/crazy-remix.jpg" alt="">
-            <div class="album-details">
-              <div class="album-header">
-                <h1 class="subtitle"><strong>Lorem ipsum dolor.</strong></h1>
-                <span class="card-date">2018</span>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis eaque, eius nemo nihil dolor officia?</p>
+          <div class="column cover-column" style="transform: translateY(-20px);">
+            <div class="vertical-cover">
+              <img class="cover" src="assets/images/crazy-acc.jpg" alt="" data-aos="fade-left" data-aos-duration="700">
+              <img class="cover" src="assets/images/crazy.jpg" alt="" data-aos="fade-left" data-aos-duration="800">
             </div>
           </div>
-
-        </div>
-        <div class="column is-vcentered is-half">
-          <div class="album-card">
-            <img class="cover" src="assets/images/crazy.jpg" alt="">
-            <div class="album-details">
-              <div class="album-header">
-                <h1 class="subtitle"><strong>Lorem ipsum dolor.</strong></h1>
-                <span class="card-date">2018</span>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis eaque, eius nemo nihil dolor officia?</p>
+          <div class="column cover-column" style="transform: translateY(0px)";>
+            <div class="vertical-cover">
+              <img class="cover" src="assets/images/crazy-remix.jpg" alt="" data-aos="fade-left" data-aos-duration="900">
+              <img class="cover" src="assets/images/jesus.jpg" alt="" data-aos="fade-left" data-aos-duration="1000">
+              <img class="cover" src="assets/images/jesus-remix.jpg" alt="" data-aos="fade-left" data-aos-duration="1200">
             </div>
           </div>
-        </div>
-        <div class="column is-vcentered is-half">
-          <div class="album-card">
-            <img class="cover" src="assets/images/jesus.jpg" alt="">
-            <div class="album-details">
-              <div class="album-header">
-                <h1 class="subtitle"><strong>Lorem ipsum dolor.</strong></h1>
-                <span class="card-date">2018</span>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis eaque, eius nemo nihil dolor officia?</p>
+          <div class="column cover-column" style="transform: translateY(-30px)";>
+            <div class="vertical-cover">
+              <img class="cover" src="assets/images/crazy.jpg" alt="" data-aos="fade-left" data-aos-duration="1100">
+              <img class="cover" src="assets/images/jesus-remix.jpg" alt="" data-aos="fade-left" data-aos-duration="1300">
+              <img class="cover" src="assets/images/crazy-remix.jpg" alt="" data-aos="fade-left" data-aos-duration="1400">
+              <img class="cover" src="assets/images/crazy-acc.jpg" alt="" data-aos="fade-left" data-aos-duration="1500">
+            </div>
+          </div>
+          <div class="column cover-column" style="transform: translateY(-30px)";>
+            <div class="vertical-cover">
+              <img class="cover" src="assets/images/crazy.jpg" alt="" data-aos="fade-left" data-aos-duration="1600">
+              <img class="cover" src="assets/images/crazy-acc.jpg" alt="" data-aos="fade-left" data-aos-duration="1700">
+              <img class="cover" src="assets/images/jesus.jpg" alt="" data-aos="fade-left" data-aos-duration="1800">
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </section>
 
-  <footer class="footer">
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Fullheight title
+        </h1>
+        <h2 class="subtitle">
+          Fullheight subtitle
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-footer">
     <div class="footer-content">
       <div class="footer-left">
         <i class="fab fa-itunes-note"></i>
@@ -112,7 +114,9 @@
 
       </div>
     </div>
-  </footer>
+  </div>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
 </body>
