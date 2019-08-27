@@ -394,13 +394,24 @@ body {
   flex-direction: column;
 }
 
+.showcase-top {
+  height: 400px;
+}
+
+.showcase-bottom {
+  height: calc(100vh - 400px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .custom-footer {
   display: flex;
   align-items: center;
   background-color: rgba(247, 64, 70, 0.9) !important;
   color: white;
   padding: 40px 30px !important;
-  height: 75px !important;
+  height: 400px !important;
   -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
   -moz-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
   box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
