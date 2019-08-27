@@ -416,6 +416,62 @@ body {
   justify-content: center;
 }
 
+.album-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*border: 1px solid black;*/
+  /*width: 600px;*/
+  padding: 20px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+}
+
+.card-cover {
+  width: 250px;
+  margin-right: 30px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+}
+
+.card-content {
+  padding-right: 30px;
+}
+
+.album-card i {
+  font-size: 2.2em;
+  cursor: pointer;
+  margin-top: 20px;
+  padding-right: 15px;
+  color: rgba(247, 64, 70, 0.9);
+  transition: all 0.4s ease-out;
+}
+
+.album-card i:hover {
+  transform: scale(1.03);
+  color: rgba(247, 64, 70, 0.7);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.custom-footer h1 {
+  text-align: center;
+  font-size: 13em;
+  font-weight: 700;
+  filter: grayscale(100%);
+  opacity: 0.05;
+}
+
 .custom-footer {
   display: flex;
   align-items: center;
@@ -431,12 +487,20 @@ body {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .footer-left i {
   font-size: 1.7em;
   padding: 15px;
+}
+
+.grow {
+  transition: all 0.4s ease-out;
+}
+
+.grow:hover {
+  transform: scale(1.02);
 }
 
 @keyframes float {
@@ -479,5 +543,58 @@ body {
   .banner-right {
     display: flex;
     justify-content: center;
+  }
+
+  .music-banner {
+    overflow: hidden;
+    margin: 0 auto;
+    height: 100vh;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    /*flex-direction: column;*/
+  }
+
+  .music-infos {
+    text-align: center;
+    width: 100%;
+    padding-right: 0rem;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .showcase-hero {
+    overflow: visible;
+  }
+
+  .cover-columns {
+    display: none;
+  }
+
+  .showcase-top {
+    display: none;
+  }
+
+  .showcase-bottom {
+    height: auto;
+  }
+
+  .album-card {
+    flex-direction: column;
+    width: 75vw;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .card-cover {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .custom-footer h1 {
+    font-size: 7em;
   }
 }
