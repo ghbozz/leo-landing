@@ -68,6 +68,7 @@ body {
 }
 
 .main-btn {
+  margin-top: 40px;
   cursor: pointer;
   font-weight: 600;
   width: 200px;
@@ -138,8 +139,8 @@ body {
 .player-img {
   background-position: center;
   background-size: cover;
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border: 4px solid white;
   border-radius: 4px;
 }
@@ -230,10 +231,14 @@ body {
 }
 
 .home-footer .right-scene {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding: 25px;
   z-index: 1;
   border-top-left-radius: 4px;
-  height: 220px;
+  height: 205px;
   width: 55%;
   background: radial-gradient(circle, rgba(0,0,0,0.8) 70%, rgba(17,14,14,1) 150%);
   -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
@@ -243,25 +248,36 @@ body {
 }
 
 .right-scene h3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   font-weight: 600;
 }
 
 .date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
-  margin-bottom: 15px;
-  width: 60px;
+  width: 65px !important;
+  height: 65px;
   padding: 5px;
-  border: 1px solid white;
-  border-radius: 4px;
+  /*margin-right: 20px;*/
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 7px;
 }
 
 .tour {
-  padding-right: 75px;
+  transform: translateY(16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .main-container {
   min-height: calc(100vh - 120px);
-  padding-top: 85px;
+  padding-top: 6rem;
 }
 
 .music-banner {
@@ -334,12 +350,11 @@ body {
 
 .cover-showcase-effect {
   position: absolute;
-  /*transform: translateX(-50%);*/
   left: -5rem;
   top: -5rem;
   width: 600px;
-  filter: grayscale(20%);
-  opacity: 0.2;
+  /*filter: grayscale(10%);*/
+  opacity: 0.4;
   transform: rotate(-12.5deg);
 }
 
