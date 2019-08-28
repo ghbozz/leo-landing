@@ -445,7 +445,19 @@ body {
 }
 
 .card-date {
+  position: relative;
   color: rgba(247, 64, 70, 0.9);
+}
+
+.card-date::after {
+  content: '';
+  width: 20%;
+  height: 2px;
+  background-color: rgba(247, 64, 70, 0.9);
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -5px;
 }
 
 .card {
