@@ -472,6 +472,10 @@ body {
   transform-origin: 110% 25%;
 }
 
+.card {
+  box-shadow: none !important
+}
+
 .card-details {
   text-align: center;
 }
@@ -623,4 +627,27 @@ body {
 
 .owl-stage-outer {
   overflow: visible !important;
+}
+
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+}
+
+.owl-dots {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-dots button {
+  background: rgba(247, 64, 70, 0.5) !important;
+  border-radius: 20px !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 5px 7px !important;
+}
+
+.owl-dots button .active {
+  background: rgba(247, 64, 70, 0.9) !important;
 }
