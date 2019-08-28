@@ -416,6 +416,12 @@ body {
   justify-content: center;
 }
 
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .album-card {
   display: flex;
   align-items: center;
@@ -439,21 +445,35 @@ body {
 }
 
 .card-content {
-  padding-right: 30px;
+  padding: 0px 60px 0px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.album-card i {
-  font-size: 2.2em;
-  cursor: pointer;
-  margin-top: 20px;
-  padding-right: 15px;
-  color: rgba(247, 64, 70, 0.9);
-  transition: all 0.4s ease-out;
+.card-content img {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-stle: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+
+  -webkit-transform: perspective(1200px) rotateY(20deg) !important;
+  -moz-transform: perspective(1200px) rotateY(20deg) !important;
+  -ms-transform: perspective(1200px) rotateY(20deg) !important;
+  -o-transform: perspective(1200px) rotateY(20deg) !important;
+  transform: perspective(1200px) rotateY(20deg) !important;
+
+  -webkit-transform-origin: 110% 25%;
+  -moz-transform-origin: 110% 25%;
+  -ms-transform-origin: 110% 25%;
+  -o-transform-origin: 110% 25%;
+  transform-origin: 110% 25%;
 }
 
-.album-card i:hover {
-  transform: scale(1.03);
-  color: rgba(247, 64, 70, 0.7);
+.card-details {
+  text-align: center;
 }
 
 .footer-content {
@@ -597,4 +617,10 @@ body {
   .custom-footer h1 {
     font-size: 7em;
   }
+}
+
+/*OWL*/
+
+.owl-stage-outer {
+  overflow: visible !important;
 }
