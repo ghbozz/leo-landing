@@ -423,26 +423,13 @@ body {
   overflow: hidden;
 }
 
-.album-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /*border: 1px solid black;*/
-  /*width: 600px;*/
-  padding: 20px;
-  border-radius: 7px;
-  -webkit-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
-  box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
-}
-
 .card-cover {
   width: 250px;
   margin-right: 30px;
   border-radius: 7px;
-  -webkit-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
-  box-shadow: 0px 5px 43px -20px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 15px 43px -20px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 15px 43px -20px rgba(0,0,0,0.75);
+  box-shadow: 0px 15px 43px -20px rgba(0,0,0,0.75);
 }
 
 .card-content {
@@ -452,25 +439,13 @@ body {
   justify-content: space-between;
 }
 
-.card-content img {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-stle: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+.card-title {
+  font-size: 3em;
+  font-weight: 600;
+}
 
-
-  -webkit-transform: perspective(1200px) rotateY(20deg) !important;
-  -moz-transform: perspective(1200px) rotateY(20deg) !important;
-  -ms-transform: perspective(1200px) rotateY(20deg) !important;
-  -o-transform: perspective(1200px) rotateY(20deg) !important;
-  transform: perspective(1200px) rotateY(20deg) !important;
-
-  -webkit-transform-origin: 110% 25%;
-  -moz-transform-origin: 110% 25%;
-  -ms-transform-origin: 110% 25%;
-  -o-transform-origin: 110% 25%;
-  transform-origin: 110% 25%;
+.card-date {
+  color: rgba(247, 64, 70, 0.9);
 }
 
 .card {
@@ -479,6 +454,23 @@ body {
 
 .card-details {
   text-align: center;
+}
+
+.commercial-links {
+  margin-top: 30px;
+}
+
+.commercial-links i {
+  font-size: 2.5em;
+  cursor: pointer;
+  padding: 0px 15px;
+  color: rgba(247, 64, 70, 0.9);
+  transition: all 0.4s ease-out;
+}
+
+.commercial-links i:hover {
+  transform: scale(1.03);
+  color: rgba(247, 64, 70, 0.7);
 }
 
 .footer-content {
@@ -622,6 +614,35 @@ body {
   .custom-footer h1 {
     font-size: 7em;
   }
+
+  .card-content {
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  .card-content img {
+    -webkit-transform: perspective(1200px) rotateY(0deg) !important;
+    -moz-transform: perspective(1200px) rotateY(0deg) !important;
+    -ms-transform: perspective(1200px) rotateY(0deg) !important;
+    -o-transform: perspective(1200px) rotateY(0deg) !important;
+    transform: perspective(1200px) rotateY(0deg) !important;
+
+    transition: none;
+
+    margin-bottom: 50px;
+  }
+
+  .owl-item.active img {
+    -webkit-transform: perspective(1200px) rotateY(0deg) !important;
+    -moz-transform: perspective(1200px) rotateY(0deg) !important;
+    -ms-transform: perspective(1200px) rotateY(0deg) !important;
+    -o-transform: perspective(1200px) rotateY(0deg) !important;
+    transform: perspective(1200px) rotateY(0deg) !important;
+  }
 }
 
 /*OWL*/
@@ -635,7 +656,11 @@ body {
 }
 
 .owl-dots {
-  padding-top: 15px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 1;
+  padding-top: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,4 +676,47 @@ body {
 
 .owl-dots button .active {
   background: rgba(247, 64, 70, 0.9) !important;
+}
+
+.card-content img {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-stle: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transform: perspective(1200px) rotateY(0deg) !important;
+  -moz-transform: perspective(1200px) rotateY(0deg) !important;
+  -ms-transform: perspective(1200px) rotateY(0deg) !important;
+  -o-transform: perspective(1200px) rotateY(0deg) !important;
+  transform: perspective(1200px) rotateY(0deg) !important;
+
+  -webkit-transform-origin: 110% 25%;
+  -moz-transform-origin: 110% 25%;
+  -ms-transform-origin: 110% 25%;
+  -o-transform-origin: 110% 25%;
+  transform-origin: 110% 25%;
+
+  transition: all 1s ease-out;
+}
+
+.owl-item.active img {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-stle: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+
+  -webkit-transform: perspective(1200px) rotateY(20deg) !important;
+  -moz-transform: perspective(1200px) rotateY(20deg) !important;
+  -ms-transform: perspective(1200px) rotateY(20deg) !important;
+  -o-transform: perspective(1200px) rotateY(20deg) !important;
+  transform: perspective(1200px) rotateY(20deg) !important;
+
+  -webkit-transform-origin: 110% 25%;
+  -moz-transform-origin: 110% 25%;
+  -ms-transform-origin: 110% 25%;
+  -o-transform-origin: 110% 25%;
+  transform-origin: 110% 25%;
 }
