@@ -398,11 +398,23 @@ body {
 }
 
 .showcase-details {
+  position: relative;
   height: 100%;
   display: flex;
   /*align-items: center;*/
   justify-content: center;
   flex-direction: column;
+}
+
+.showcase-details span {
+  position: absolute;
+  top: 8%;
+  right: 10px;
+  padding: 10px 10px;
+  border-radius: 4px;
+  background-color: rgba(247, 64, 70, 0.9);
+  color: white;
+  font-weight: 600;
 }
 
 .showcase-top {
@@ -421,6 +433,14 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.slider-title {
+  font-size: 4em;
+  font-weight: 700;
+  padding-bottom: 50px;
+  color: rgba(247, 64, 70, 0.3);
 }
 
 .card-cover {
@@ -507,10 +527,13 @@ body {
   background-color: rgba(247, 64, 70, 0.9) !important;
   color: white;
   padding: 40px 30px !important;
-  height: 400px !important;
-  -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
+  min-height: 400px !important;
+/*  -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
   -moz-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
-  box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
+  box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);*/
+  -webkit-box-shadow: inset -2px 2px 25px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset -2px 2px 25px -5px rgba(0,0,0,0.75);
+  box-shadow: inset -2px 2px 25px -5px rgba(0,0,0,0.75);
 }
 
 .footer-content {
@@ -657,6 +680,13 @@ body {
   }
 }
 
+/*@media screen and (min-width: 1025px) and (max-width: 1280px) {
+
+  .custom-footer h1 {
+    font-size: 3em;
+  }
+}*/
+
 /*OWL*/
 
 .owl-stage-outer {
@@ -686,7 +716,7 @@ body {
   margin: 5px 7px !important;
 }
 
-.owl-dots button .active {
+.owl-dots button.active {
   background: rgba(247, 64, 70, 0.9) !important;
 }
 
