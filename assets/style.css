@@ -437,8 +437,8 @@ body {
 }
 
 .slider-title {
-  font-size: 4em;
-  font-weight: 700;
+  font-size: 3.2em;
+  font-weight: 600;
   padding-bottom: 50px;
   color: rgba(247, 64, 70, 0.3);
 }
@@ -519,6 +519,12 @@ body {
   font-weight: 700;
   filter: grayscale(100%);
   opacity: 0.05;
+  margin-top: -5%;
+  transition: all 0.4s ease-out;
+}
+
+.custom-footer h1:hover {
+  opacity: 0.3;
 }
 
 .custom-footer {
@@ -537,14 +543,28 @@ body {
 }
 
 .footer-content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.footer-left i {
-  font-size: 1.7em;
+.footer-socials {
+  bottom: -20%;
+  position: absolute;
+}
+
+.footer-socials i {
+  font-size: 3em;
   padding: 15px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+
+.footer-socials i:hover {
+  opacity: 0.6;
+  transform: scale(1.03);
 }
 
 .grow {
