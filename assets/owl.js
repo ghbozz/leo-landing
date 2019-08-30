@@ -5,6 +5,7 @@ $(document).ready(function(){
       autoplay:true,
       loop:true,
       smartSpeed: 800,
+      autoplayHoverPause: true,
       autoHeight:true
   });
 });
