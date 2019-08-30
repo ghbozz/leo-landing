@@ -267,6 +267,7 @@ body {
   border-top-left-radius: 4px;
   height: 205px;
   width: 55%;
+  overflow: hidden;
   background: radial-gradient(circle, rgba(0,0,0,0.8) 70%, rgba(17,14,14,1) 120%);
   -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
   -moz-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
@@ -314,6 +315,7 @@ body {
   width: 65px !important;
   height: 65px;
   padding: 5px;
+  margin-right: 20px;
   /*margin-right: 20px;*/
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 7px;
@@ -324,7 +326,7 @@ body {
   transform: translateY(16px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0px 25px;
 }
 
@@ -346,13 +348,14 @@ body {
 }
 
 .event-title {
-  position: absolute;
-  top: -35%;
+/*  position: absolute;
+  top: -50%;*/
   font-size: 1.4em;
   font-weight: 600;
 }
 
 .event-desc p {
+  margin-top: -10px;
   padding-top: 10px;
 }
 
