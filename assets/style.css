@@ -257,7 +257,7 @@ body {
   width: 45%;
 }
 
-.home-footer .right-scene {
+.right-scene {
   position: relative;
   display: flex;
   justify-content: center;
@@ -267,11 +267,34 @@ body {
   border-top-left-radius: 4px;
   height: 205px;
   width: 55%;
-  background: radial-gradient(circle, rgba(0,0,0,0.8) 70%, rgba(17,14,14,1) 150%);
+  background: radial-gradient(circle, rgba(0,0,0,0.8) 70%, rgba(17,14,14,1) 120%);
   -webkit-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
   -moz-box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
   box-shadow: -9px -7px 25px -15px rgba(0,0,0,0.60);
-  transition: all 0.7s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.right-scene::before {
+  content: '';
+  width: 5%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right-scene-wrapper {
+  position: absolute;
+  top: 75px;
+}
+
+.right-scene:hover {
+  height: 450px;
+  -webkit-box-shadow: -9px -7px 40px -15px rgba(0,0,0,0.60);
+  -moz-box-shadow: -9px -7px 40px -15px rgba(0,0,0,0.60);
+  box-shadow: -9px -7px 40px -15px rgba(0,0,0,0.60);
 }
 
 .right-scene h3 {
@@ -279,6 +302,7 @@ body {
   top: 20px;
   left: 20px;
   font-weight: 600;
+  font-size: 1.5em;
 }
 
 .date {
@@ -291,15 +315,45 @@ body {
   height: 65px;
   padding: 5px;
   /*margin-right: 20px;*/
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 7px;
 }
 
 .tour {
+  position: relative;
   transform: translateY(16px);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0px 25px;
+}
+
+.fa-info-circle {
+  position: absolute;
+  left: 3%;
+  top: -15%;
+  font-size: 1.5em;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.fa-info-circle:hover {
+  color: rgba(247, 64, 70, 0.9);
+}
+
+.event-desc {
+  position: relative;
+}
+
+.event-title {
+  position: absolute;
+  top: -35%;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.event-desc p {
+  padding-top: 10px;
 }
 
 .main-container {
