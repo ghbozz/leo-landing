@@ -92,6 +92,18 @@ body {
   position: relative;
 }
 
+.banner-right {
+  position: relative;
+}
+
+.banner-right .stroke {
+  transform: rotate(-25deg) scale(1.30);
+  z-index: -1;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+}
+
 .player-container {
   position: relative;
   overflow: hidden;
